@@ -1,5 +1,7 @@
 package be.abdullah;
 
+import be.abdullah.entities.Bidirectional.Employee;
+import be.abdullah.entities.Bidirectional.Office;
 import be.abdullah.entities.Unidirectional.Profile;
 import be.abdullah.entities.Unidirectional.User;
 import jakarta.persistence.EntityManager;
@@ -8,7 +10,13 @@ import jakarta.persistence.Persistence;
 
 public class Main {
     public static void main(String[] args) {
+        //unidirectional relationship
+        //unidirectional();
+        //bidirectional relationship
+        bidirectional();
+    }
 
+    private static void unidirectional() {
         try (EntityManagerFactory emf = Persistence.createEntityManagerFactory("my-persistence-unit")) {
 
             EntityManager em = emf.createEntityManager();
@@ -23,6 +31,30 @@ public class Main {
 
             em.persist(profile);
             em.persist(user);
+
+            em.getTransaction().commit();
+        }
+    }
+
+    private static void bidirectional() {
+        try (EntityManagerFactory emf = Persistence.createEntityManagerFactory("my-persistence-unit")) {
+
+            EntityManager em = emf.createEntityManager();
+
+            em.getTransaction().begin();
+
+            Office office = new Office();
+            office.setName("B2");
+
+            Employee  employee = new Employee();
+            employee.setName("Alice");
+            employee.setOffice(office);
+
+            office.setEmployee(employee);
+
+
+            em.persist(office);
+            em.persist(employee);
 
             em.getTransaction().commit();
         }

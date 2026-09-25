@@ -11,6 +11,8 @@
 
         <class>be.abdullah.entities.Unidirectional.Profile</class>
         <class>be.abdullah.entities.Unidirectional.User</class>
+        <class>be.abdullah.entities.Bidirectional.Office</class>
+        <class>be.abdullah.entities.Bidirectional.Employee</class>
 
         <properties>
 
@@ -30,7 +32,7 @@
                       value="org.hibernate.dialect.PostgreSQLDialect"/>
 
             <property name="hibernate.hbm2ddl.auto"
-                      value="update"/>
+                      value="create"/>
 
             <property name="hibernate.show_sql"
                       value="true"/>
