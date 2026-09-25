@@ -9,10 +9,10 @@
 
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        <class>be.abdullah.entities.Unidirectional.Profile</class>
-        <class>be.abdullah.entities.Unidirectional.User</class>
-        <class>be.abdullah.entities.Bidirectional.Office</class>
-        <class>be.abdullah.entities.Bidirectional.Employee</class>
+        <class>be.abdullah.entities.unidirectional.Profile</class>
+        <class>be.abdullah.entities.unidirectional.User</class>
+        <class>be.abdullah.entities.bidirectional.Office</class>
+        <class>be.abdullah.entities.bidirectional.Employee</class>
 
         <properties>
 

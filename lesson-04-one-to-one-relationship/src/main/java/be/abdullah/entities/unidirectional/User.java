@@ -1,4 +1,4 @@
-package be.abdullah.entities.Unidirectional;
+package be.abdullah.entities.unidirectional;
 
 import jakarta.persistence.*;
 import lombok.Setter;

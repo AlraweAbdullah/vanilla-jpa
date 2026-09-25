@@ -1,9 +1,9 @@
 package be.abdullah;
 
-import be.abdullah.entities.Bidirectional.Employee;
-import be.abdullah.entities.Bidirectional.Office;
-import be.abdullah.entities.Unidirectional.Profile;
-import be.abdullah.entities.Unidirectional.User;
+import be.abdullah.entities.bidirectional.Employee;
+import be.abdullah.entities.bidirectional.Office;
+import be.abdullah.entities.unidirectional.Profile;
+import be.abdullah.entities.unidirectional.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
